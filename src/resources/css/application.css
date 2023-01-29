@@ -1,0 +1,217 @@
+.lion {
+    -fx-background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 6;
+    -fx-text-fill: black;
+}
+
+.lion:hover {
+    -fx-background-color: rgb(191, 191, 191);
+    background-color: rgb(191, 191, 191);
+}
+
+.keyboard {
+    -fx-background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 25;
+    -fx-font-size: 25;
+    font-size: 15;
+}
+
+.keyboard:hover {
+    -fx-background-color: rgb(191, 191, 191);
+    background-color: rgb(191, 191, 191);
+}
+
+.keyboard:selected {
+    -fx-background-color: rgb(255, 240, 75);
+    background-color: rgb(255, 240, 75);
+}
+
+.keyboard:selected:focused {
+    -fx-background-color: rgb(255, 240, 75);
+    background-color: rgb(255, 240, 75);
+}
+
+.lion-chosen {
+    -fx-background-color: rgb(75, 162, 255);
+    background-color: rgb(75, 162, 255);
+    -fx-text-fill: white;
+    color: white;
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 6;
+}
+
+.lion-chosen:hover {
+    -fx-background-color: rgb(191, 191, 191);
+    background-color: rgb(191, 191, 191);
+    -fx-text-fill: black;
+    color: black;
+}
+
+.lion-transparent {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 6;
+}
+
+.lion-transparent:hover {
+    -fx-background-color: rgb(223, 223, 223);
+    background-color: rgb(223, 223, 223);
+}
+
+.bar {
+    -fx-background-color: linear-gradient(to bottom, white 80%, transparent 100%);
+    background-color: linear-gradient(to bottom, white 80%, transparent 100%);
+    -fx-effect: dropshadow( gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}
+
+.textarea {
+    -fx-control-inner-background: transparent;
+    -fx-background-color: white, white;
+    -fx-background-insets: 0, 3;
+    -fx-background-radius: 6, 3;
+    -fx-focus-color: transparent;
+    background-color: white;
+    -fx-text-fill: black;
+}
+
+.text-area.content {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.textarea.scroll-pane {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.textarea.scroll-pane.viewport {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.textarea.scroll-pane.content {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.text-area:focused {
+    -fx-control-inner-background: transparent;
+    -fx-background-color: -fx-outer-border, white;
+    -fx-background-insets: 0, 3;
+    -fx-background-radius: 6, 3;
+    -fx-outer-border: rgb(30, 117, 217);
+    background-color: white;
+    -fx-text-fill: black;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.transparent {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.transparent.scroll-pane {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.transparent.scroll-pane.viewport {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.transparent.scroll-pane.content {
+    -fx-background-color: transparent;
+    background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 6;
+    -fx-background: transparent;
+    background: transparent;
+}
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+}
+
+.progress-bar>.bar {
+    -fx-background-insets: 1 1 2 1;
+    -fx-padding: 0.20em;
+    padding: 0.20em;
+    -fx-background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 153, 255);
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-border-color: transparent;
+    border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-border-radius: 2.0em;
+    border-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+    padding: 0.0 0.0 10.0 0.0;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    background-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 10.0 0.0 0.0;
+    padding: 0.0 10.0 0.0 0.0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0.15em 0.0;
+    padding: 0.15em 0.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0.0 0.15em;
+    padding: 0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black, 90.0%);
+    background-color: derive(black, 90.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: derive(#4D4C4F, 10.0%);
+    background-color: derive(#4D4C4F, 10.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}

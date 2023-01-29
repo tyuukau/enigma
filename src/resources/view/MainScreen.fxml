@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="750.0" maxWidth="1100.0" minHeight="750.0" minWidth="1100.0" prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: F4F4F5;" styleClass="root" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="320.0" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="780.0">
+         <children>
+            <HBox maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="220.0">
+               <children>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Home">
+                     <font>
+                        <Font name="SF Pro Display Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </HBox>
+            <Pane prefHeight="60.0" prefWidth="460.0" />
+            <HBox maxHeight="60.0" maxWidth="60.0" minHeight="40.0" minWidth="60.0" prefHeight="40.0" prefWidth="60.0">
+               <children>
+                  <Button maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#switchHelp" prefHeight="40.0" prefWidth="40.0" styleClass="lion-transparent">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../controller/questionmark.circle@2x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="750.0" prefWidth="320.0" style="-fx-border-color: transparent C6C6C8 transparent transparent; -fx-background-color: E8E9E9;">
+         <children>
+            <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Enigma">
+               <font>
+                  <Font name="SF Pro Display Heavy" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Pane prefHeight="265.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Pane>
+            <HBox>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="560.0" layoutY="100.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="300.0" text="To begin, choose a mode.">
+         <font>
+            <Font name="SF Pro Text Regular" size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="560.0" layoutY="200.0" prefHeight="250.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchSimple" prefHeight="50.0" prefWidth="280.0" styleClass="lion" stylesheets="@../css/application.css" text="Simple Mode">
+               <font>
+                  <Font name="SF Pro Text Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchKeyboard" prefHeight="50.0" prefWidth="280.0" styleClass="lion" stylesheets="@../css/application.css" text="Keyboard Mode">
+               <font>
+                  <Font name="SF Pro Text Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchWires" prefHeight="50.0" prefWidth="280.0" styleClass="lion" stylesheets="@../css/application.css" text="Wires Mode">
+               <font>
+                  <Font name="SF Pro Text Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchHack" prefHeight="50.0" prefWidth="280.0" styleClass="lion" stylesheets="@../css/application.css" text="Hack Mode">
+               <font>
+                  <Font name="SF Pro Text Regular" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
