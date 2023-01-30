@@ -31,7 +31,7 @@ public abstract class GeneralController {
 
     @FXML
     public void back(ActionEvent event) {
-        switchScene("../resources/view/MainScreen.fxml", new MainScreenController(), event);
+        switchScene("../resources/view/MainScreen2.fxml", new MainScreenController(), event);
     }
 
     @FXML

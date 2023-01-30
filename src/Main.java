@@ -15,7 +15,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         System.setProperty("prism.lcdtext", "false");
-        final String STORE_FXML_FILE_PATH = "resources/view/MainScreen.fxml";
+        final String STORE_FXML_FILE_PATH = "resources/view/MainScreen2.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
         MainScreenController homeController = new MainScreenController();
         fxmlLoader.setController(homeController);

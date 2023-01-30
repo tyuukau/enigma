@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="730.0" maxWidth="1060.0" minHeight="730.0" minWidth="1060.0" prefHeight="730.0" prefWidth="1060.0" style="-fx-background-color: F4F4F5;" styleClass="root" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="300.0" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
+      <BorderPane prefWidth="200.0">
+         <left>
+            <VBox prefHeight="730.0" prefWidth="300.0" style="-fx-border-color: transparent C6C6C8 transparent transparent; -fx-background-color: E8E9E9;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Enigma">
+                     <font>
+                        <Font name="SF Pro Display Heavy" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Reflector">
+                     <font>
+                        <Font name="SF Pro Text Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="0.0">
+                     <children>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="40.0" text="Type:">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="reflector_type" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Label layoutX="51.0" layoutY="191.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Rotors">
+                     <font>
+                        <Font name="SF Pro Text Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxHeight="30.0" maxWidth="260.0" minHeight="30.0" prefHeight="30.0" prefWidth="260.0" spacing="9.0">
+                     <children>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="65.0" text="Left">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="65.0" text="Middle">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="65.0" text="Right">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="30.0" maxWidth="260.0" minHeight="30.0" prefHeight="30.0" prefWidth="260.0" spacing="9.0">
+                     <children>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="38.0" text="Type:">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="left_rotor_type" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="middle_rotor_type" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="right_rotor_type" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="30.0" maxWidth="260.0" minHeight="30.0" prefHeight="30.0" prefWidth="260.0" spacing="9.0">
+                     <children>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="38.0" text="Start:">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="left_rotor_start" layoutX="55.0" layoutY="16.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="middle_rotor_start" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="right_rotor_start" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox maxHeight="30.0" maxWidth="260.0" minHeight="30.0" prefHeight="30.0" prefWidth="260.0" spacing="9.0">
+                     <children>
+                        <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="38.0" text="Ring:">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="left_rotor_ring" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="middle_rotor_ring" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="right_rotor_ring" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="65.0" styleClass="lion">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Plugboard">
+                     <font>
+                        <Font name="SF Pro Text Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="plugboard" maxHeight="34.0" maxWidth="260.0" minHeight="30.0" prefHeight="30.0" prefWidth="260.0" styleClass="lion">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="SF Mono Regular" size="13.0" />
+                     </font>
+                  </TextField>
+                  <HBox maxWidth="140.0" minHeight="30.0" minWidth="90.0" prefHeight="30.0" prefWidth="140.0">
+                     <children>
+                        <Button alignment="BASELINE_CENTER" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="60.0" styleClass="lion" stylesheets="@../css/application.css" text="Save" underline="true">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_CENTER" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="60.0" styleClass="lion" stylesheets="@../css/application.css" text="Reset" underline="true">
+                           <font>
+                              <Font name="SF Pro Text Regular" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox maxHeight="40.0" minHeight="40.0" prefHeight="40.0" prefWidth="220.0">
+                     <children>
+                        <Button maxHeight="32.0" maxWidth="32.0" minHeight="32.0" minWidth="32.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="32.0" styleClass="lion-transparent">
+                           <HBox.margin>
+                              <Insets left="-12.0" right="10.0" top="4.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../controller/chevron.backward@2x.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" text="Keyboard Mode">
+                           <font>
+                              <Font name="SF Pro Display Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="660.0" prefWidth="720.0">
+                     <children>
+                        <HBox prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="80.0" text="Input">
+                                 <font>
+                                    <Font name="SF Pro Text Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="80.0" text="Output">
+                                 <font>
+                                    <Font name="SF Pro Text Bold" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="290.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <TextArea fx:id="inputField" maxHeight="-Infinity" maxWidth="350.0" minHeight="50.0" prefHeight="70.0" prefWidth="350.0" styleClass="textarea" wrapText="true">
+                                 <font>
+                                    <Font name="SF Mono Regular" size="13.0" />
+                                 </font>
+                              </TextArea>
+                              <TextArea fx:id="outputField" editable="false" focusTraversable="false" maxHeight="-Infinity" maxWidth="350.0" minHeight="50.0" mouseTransparent="true" prefHeight="70.0" prefWidth="350.0" styleClass="textarea" wrapText="true">
+                                 <font>
+                                    <Font name="SF Mono Regular" size="13.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="200.0" text="Keyboard">
+                           <font>
+                              <Font name="SF Pro Text Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox fx:id="inputPane" alignment="CENTER" prefHeight="230.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;" />
+                        <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="200.0" text="Lampboard">
+                           <font>
+                              <Font name="SF Pro Text Bold" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox fx:id="outputPane" alignment="CENTER" mouseTransparent="true" prefHeight="230.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="5.0" />
+               </padding>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

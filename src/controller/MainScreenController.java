@@ -9,17 +9,17 @@ public class MainScreenController extends GeneralController {
 
     @FXML
     public void switchSimple(ActionEvent event) {
-        switchScene("../resources/view/SimpleScreen.fxml", new ModeSimpleScreenController(), event);
+        switchScene("../resources/view/SimpleScreen2.fxml", new ModeSimpleScreenController(), event);
     }
 
     @FXML
     public void switchKeyboard(ActionEvent event) {
-        switchScene("../resources/view/KeyboardScreen.fxml", new ModeKeyboardScreenController(), event);
+        switchScene("../resources/view/KeyboardScreen2.fxml", new ModeKeyboardScreenController(), event);
     }
 
     @FXML
     public void switchWires(ActionEvent event) {
-        switchScene("../resources/view/WiresScreen.fxml", new ModeWiresScreenController(), event);
+        switchScene("../resources/view/WiresScreen2.fxml", new ModeWiresScreenController(), event);
     }
 
     @FXML
@@ -29,7 +29,7 @@ public class MainScreenController extends GeneralController {
 
     @FXML
     public void switchHelp(ActionEvent event) {
-        super.switchScene("../resources/view/HelpScreen.fxml", new HelpScreenController(), event);
+        super.switchScene("../resources/view/HelpScreen2.fxml", new HelpScreenController(), event);
     }
 
 }
