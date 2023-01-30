@@ -61,15 +61,51 @@ public abstract class ModeDemonstrationController extends GeneralController {
 
     // Common members
 
-    protected String output = "";
-
     protected Enigma enigma;
 
     protected String outputChar;
 
     // Common helper methods
 
-    public void initializeEnigma() {
+    public void initialize() {
+        initializeEnigma();
+
+        initializeGUI();
+
+        initializeOther();
+    };
+
+    public void save(ActionEvent event) {
+        saveEnigma();
+        
+        initializeGUI();
+
+        resetOther();
+    };
+
+    public void reset(ActionEvent event) {
+        initializeEnigma();
+        
+        initializeGUI();
+
+        resetOther();
+    };
+
+    protected void update(String input) {
+        updateGUI(input);
+
+        updateOther(input);
+    };
+
+    // Abstract implementations
+
+    protected abstract void initializeOther();
+    protected abstract void resetOther();
+    protected abstract void updateOther(String input);
+
+    // Internal methods
+
+    private void initializeEnigma() {
 
         // Set values for the menus
 
@@ -107,7 +143,7 @@ public abstract class ModeDemonstrationController extends GeneralController {
         System.out.println(enigma.getInfo());
     }
 
-    public void saveEnigma() {
+    private void saveEnigma() {
 
         // Get values for the Enigma machine
 
@@ -136,7 +172,7 @@ public abstract class ModeDemonstrationController extends GeneralController {
         System.out.println(enigma.getInfo());
     }
 
-    public void initializeGUI() {
+    private void initializeGUI() {
 
         // Blank input, output fields
 
@@ -171,7 +207,7 @@ public abstract class ModeDemonstrationController extends GeneralController {
         });
     }
 
-    public void updateGUI(String input) {
+    private void updateGUI(String input) {
         outputChar = enigma.encrypt(input);
         outputField.appendText(outputChar);
         int[] positions = enigma.getRotorPostions();
@@ -179,15 +215,5 @@ public abstract class ModeDemonstrationController extends GeneralController {
         middle_rotor_start.getSelectionModel().select(positions[1]);
         right_rotor_start.getSelectionModel().select(positions[2]);
     }
-
-    // Abstract implementations
-
-    protected abstract void initialize();
-
-    protected abstract void save(ActionEvent event);
-
-    protected abstract void reset(ActionEvent event);
-
-    protected abstract void update(String input);
 
 }

@@ -1,31 +1,19 @@
 package controller;
 
-import javafx.event.ActionEvent;
-
 public class ModeSimpleScreenController extends ModeDemonstrationController {
 
     // Mandatory methods
-    
-    public void initialize() {
-        initializeEnigma();
 
-        initializeGUI();    
+    @Override
+    protected void initializeOther() {
     }
 
-    public void save(ActionEvent event) {
-        saveEnigma();
-
-        initializeGUI();
+    @Override
+    protected void resetOther() {
     }
 
-    public void reset(ActionEvent event) {
-        initializeEnigma();
-        
-        initializeGUI();
-    }
-
-    public void update(String input) {
-        updateGUI(input);
+    @Override
+    protected void updateOther(String input) {
     }
 
 }

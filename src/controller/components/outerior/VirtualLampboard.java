@@ -1,4 +1,4 @@
-package controller.components;
+package controller.components.outerior;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,21 +17,19 @@ import com.sun.javafx.css.StyleManager;
 
 public class VirtualLampboard {
 
-    private ToggleGroup tg = new ToggleGroup();
+    // Internal members
 
     private final VBox root;
+    private ToggleGroup tg = new ToggleGroup();
 
-    /**
-     * Creates a VirtualLampboard which uses the focusProperty of the scene to which
-     * it is attached as its target
-     */
+    // Instantiations
+
+    // Creates a VirtualLampboard which uses the focusProperty of the scene to which it is attached as its target
     public VirtualLampboard() {
         this(null);
     }
 
-    /**
-     * Creates a Virtual Lampboard.
-     */
+    // Creates a VirtualLampboard
     public VirtualLampboard(ReadOnlyObjectProperty<Node> target) {
 
         StyleManager.getInstance().addUserAgentStylesheet("../resources/css/application.css");
@@ -51,15 +49,15 @@ public class VirtualLampboard {
             root.getChildren().add(hbox);
 
             for (int k = 0; k < shifted[row].length; k++) {
-                hbox.getChildren().add(createNonshiftableButton(shifted[row][k]));
+                hbox.getChildren().add(createFixedButton(shifted[row][k]));
             }
         }
 
     }
 
-    /**
-     * @return a view of the lampboard.
-     */
+    // Public methods
+
+    // Returns a view of the lampboard
     public Node view() {
         return root;
     }
@@ -76,8 +74,10 @@ public class VirtualLampboard {
         tg.selectToggle(null);
     }
 
-    // Creates a button with fixed text not responding to Shift
-    private ToggleButton createNonshiftableButton(final String text) {
+    // Internal methods
+
+    // Creates a button with fixed text
+    private ToggleButton createFixedButton(final String text) {
         StringProperty textProperty = new SimpleStringProperty(text);
         ToggleButton button = createButton(textProperty);
         return button;
@@ -99,7 +99,5 @@ public class VirtualLampboard {
 
         return button;
     }
-
-
 
 }

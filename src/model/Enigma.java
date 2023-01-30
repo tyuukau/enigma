@@ -13,6 +13,8 @@ public class Enigma {
     public Reflector reflector;
     public Plugboard plugboard;
 
+    private int[] encryptProcess = new int[10];
+
     public char encrypt(char c) {
         return (char)(this.encrypt(c - 65) + 65);
     }
@@ -49,6 +51,8 @@ public class Enigma {
         // Plugboard out
         int c9 = plugboard.forward(c8);
 
+        this.encryptProcess = new int[] {c0, c1, c2, c3, c4, c5, c6, c7, c8, c9};
+
         return c9;
     }
 
@@ -64,6 +68,30 @@ public class Enigma {
         }
         // Always increment right-most rotor
         rightRotor.turnover();
+    }
+
+    public Rotor getLeftRotor() {
+        return this.leftRotor;
+    }
+
+    public Rotor getMiddleRotor() {
+        return this.middleRotor;
+    }
+
+    public Rotor getRightRotor() {
+        return this.rightRotor;
+    }
+
+    public Reflector getReflector() {
+        return this.reflector;
+    }
+
+    public Plugboard getPlugboard() {
+        return this.plugboard;
+    }
+
+    public int[] getEncryptProcess() {
+        return this.encryptProcess;
     }
 
     public int[] getRotorPostions() {

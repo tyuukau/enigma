@@ -1,9 +1,7 @@
 package controller;
 
-import controller.components.VirtualKeyboard;
-import controller.components.VirtualLampboard;
-
-import javafx.event.ActionEvent;
+import controller.components.outerior.VirtualKeyboard;
+import controller.components.outerior.VirtualLampboard;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
@@ -22,35 +20,20 @@ public class ModeKeyboardScreenController extends ModeDemonstrationController {
 
     // Mandatory methods
 
-    public void initialize() {
-        initializeEnigma();
-
-        initializeGUI();
-
+    @Override
+    protected void initializeOther() {
         inputPane.getChildren().addAll(vk.view());  
         outputPane.getChildren().addAll(vl.view());
     }
 
-    public void save(ActionEvent event) {
-        saveEnigma();
-        
-        initializeGUI();
-
-        vl.unsetButton();
+    @Override
+    protected void resetOther() {
+        vl.unsetButton();        
     }
 
-    public void reset(ActionEvent event) {
-        initializeEnigma();
-        
-        initializeGUI();
-        
-        vl.unsetButton();
-    }
-
-    public void update(String input) {
-        updateGUI(input);
-
-        vl.setButton(outputChar);
+    @Override
+    protected void updateOther(String input) {
+        vl.setButton(outputChar);        
     }
 
 }

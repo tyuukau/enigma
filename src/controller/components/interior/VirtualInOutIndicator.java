@@ -1,19 +1,23 @@
-package controller.components;
+package controller.components.interior;
 
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
 
 import com.sun.javafx.css.StyleManager;
 
-public class VirtualWiredReflector extends VirtualWiredComponent {
-    
-    private final int width = 130;
-    private final int height = 520;
+public class VirtualInOutIndicator extends VirtualInternalComponent {
 
-    public VirtualWiredReflector() {
+    // Internal members
+
+    private final int intCharOffset = 65;
+
+    // Instantiations
+    
+    public VirtualInOutIndicator(int width) {
+
+        super(width);
 
         StyleManager.getInstance().addUserAgentStylesheet("../resources/css/application.css");
 
@@ -22,11 +26,6 @@ public class VirtualWiredReflector extends VirtualWiredComponent {
         this.root.setMinSize(width, height);
         this.root.setPrefSize(width, height);
         this.root.setMaxSize(width, height);
-
-        this.graphicPane = new Pane();
-
-        this.graphicPane.setMinSize(width, height);
-        this.graphicPane.setMaxSize(width, height);
 
         this.charPane = new GridPane();
 
@@ -39,22 +38,29 @@ public class VirtualWiredReflector extends VirtualWiredComponent {
             this.charPane.getRowConstraints().add(rowConst);         
         }
 
-        ColumnConstraints colConst0 = new ColumnConstraints(110, 110, 110);
+        ColumnConstraints colConst0 = new ColumnConstraints(width, width, width);
         this.charPane.getColumnConstraints().add(colConst0);
 
-        ColumnConstraints colConst1 = new ColumnConstraints(20, 20, 20);
-        this.charPane.getColumnConstraints().add(colConst1);
-
-        fillColumn(this.charPane, alphabet, 1);
-
         this.root.getChildren().addAll(
-            this.graphicPane, 
             this.charPane);
 
     }
 
-    public void draw() {
-        
+    // Public methods
+
+    public void draw(String input, String output) {
+        this.charPane.getChildren().clear();
+
+        int i = input.charAt(0) - intCharOffset;
+        int o = output.charAt(0) - intCharOffset;
+
+        fill(charPane, "<<", 0, i);
+        fill(charPane, ">>", 0, o);
+
+    }
+
+    public void reset() {
+        this.charPane.getChildren().clear();
     }
 
 }

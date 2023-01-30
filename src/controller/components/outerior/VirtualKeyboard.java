@@ -1,4 +1,4 @@
-package controller.components;
+package controller.components.outerior;
 
 import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,7 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.Priority;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
@@ -22,11 +21,18 @@ import com.sun.javafx.css.StyleManager;
 
 public class VirtualKeyboard {
 
+    // Internal members
+
     private final VBox root;
 
-    /**
-     * Creates a Virtual Keyboard.
-     */
+    // Instantiations
+
+    // Creates a VirtualKeyboard which uses the focusProperty of the scene to which it is attached as its target
+    public VirtualKeyboard() {
+        this(null);
+    }
+
+    // Creates a VirtualKeyboard.
     public VirtualKeyboard(ReadOnlyObjectProperty<Node> target) {
 
         StyleManager.getInstance().addUserAgentStylesheet("../resources/css/application.css");
@@ -54,33 +60,23 @@ public class VirtualKeyboard {
             root.getChildren().add(hbox);
 
             for (int k = 0; k < shifted[row].length; k++) {
-                hbox.getChildren().add(createNonshiftableButton(shifted[row][k], codes[row][k], target));
+                hbox.getChildren().add(createFixedButton(shifted[row][k], codes[row][k], target));
             }
         }
 
-        final Button spaceBar = createNonshiftableButton(" ", KeyCode.SPACE, target);
-        spaceBar.setMaxWidth(Double.POSITIVE_INFINITY);
-        HBox.setHgrow(spaceBar, Priority.ALWAYS);
-
     }
 
-    /**
-     * Creates a VirtualKeyboard which uses the focusProperty of the scene to which
-     * it is attached as its target
-     */
-    public VirtualKeyboard() {
-        this(null);
-    }
+    // Public methods
 
-    /**
-     * @return a view of the keyboard.
-     */
+    // Returns a view of the keyboard
     public Node view() {
         return root;
     }
 
-    // Creates a button with fixed text not responding to Shift
-    private Button createNonshiftableButton(final String text, final KeyCode code,
+    // Internal methods
+
+    // Creates a button with fixed text
+    private Button createFixedButton(final String text, final KeyCode code,
             final ReadOnlyObjectProperty<Node> target) {
         StringProperty textProperty = new SimpleStringProperty(text);
         Button button = createButton(textProperty, code, target);
