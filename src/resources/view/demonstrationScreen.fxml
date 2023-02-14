@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1080.0" styleClass="root" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="1060.0" styleClass="box" stylesheets="@../css/application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefWidth="35.0" text="Head">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="headInput" prefHeight="30.0" prefWidth="50.0" styleClass="textarea">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefWidth="85.0" text="Waiting track">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="requestsInput" prefHeight="30.0" prefWidth="300.0" styleClass="textarea">
+                     <HBox.margin>
+                        <Insets right="210.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button alignment="BASELINE_CENTER" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="60.0" styleClass="lion-transparent" stylesheets="@../css/application.css" text="Save" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="BASELINE_CENTER" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#reset" prefHeight="30.0" prefWidth="60.0" styleClass="lion-transparent" stylesheets="@../css/application.css" text="Reset" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Line endY="15.0" startY="-15.0" stroke="#c6c6c8">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Label prefWidth="100.0" text="Topic 18 OS">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#help" prefHeight="30.0" prefWidth="30.0" styleClass="lion-transparent">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../controller/questionmark.circle@2x.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <left>
+            <VBox maxHeight="-Infinity" prefHeight="200.0" prefWidth="110.0" spacing="5.0" styleClass="box" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <CheckBox fx:id="fcfsButton" mnemonicParsing="false" text="FCFS">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="lifoButton" mnemonicParsing="false" text="LIFO">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="sstfButton" mnemonicParsing="false" text="SSTF">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="scanButton" mnemonicParsing="false" text="SCAN">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="cscanButton" mnemonicParsing="false" text="CSCAN">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="lookButton" mnemonicParsing="false" text="LOOK">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="clookButton" mnemonicParsing="false" text="CLOOK">
+                     <font>
+                        <Font size="15.0" />
+                     </font></CheckBox>
+                  <Button alignment="BASELINE_CENTER" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#go" prefHeight="30.0" prefWidth="60.0" styleClass="lion-transparent" stylesheets="@../css/application.css" text="Go" underline="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="730.0" prefWidth="940.0" styleClass="box" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="10.0" top="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="710.0" prefWidth="920.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label text="Selected: ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="selectedAlgorithmsLabel" text="None">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane fx:id="drawPane" prefHeight="680.0" prefWidth="920.0" />
+                     </children></VBox>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
