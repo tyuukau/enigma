@@ -6,20 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch ConsoleDriver",
-            "request": "launch",
-            "mainClass": "ConsoleDriver",
-            "projectName": "disc-scheduling_6ddb319"
-        },
-        {
-            "type": "java",
-            "name": "Launch GUIDriver",
-            "request": "launch",
-            "mainClass": "GUIDriver",
-            "projectName": "disc-scheduling_6ddb319"
-        },
-        {
-            "type": "java",
             "name": "Launch Hack",
             "request": "launch",
             "mainClass": "analysis.hack.Hack",
