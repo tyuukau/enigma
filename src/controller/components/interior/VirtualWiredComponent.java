@@ -19,7 +19,7 @@ public abstract class VirtualWiredComponent extends VirtualInternalComponent {
 
     protected final int charColumnWidth = 20;
     protected int blankColumnWidth;
-    protected final int rowWidth = 20;
+    protected final int rowHeight = height / 26;
 
     public final int[] displayWiring = new int[26];
 

@@ -1,11 +1,7 @@
 package controller.components.interior;
 
 import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.layout.StackPane;
-
-import com.sun.javafx.css.StyleManager;
 
 public class VirtualInOutIndicator extends VirtualInternalComponent {
 
@@ -18,19 +14,6 @@ public class VirtualInOutIndicator extends VirtualInternalComponent {
     public VirtualInOutIndicator(int width) {
 
         super(width);
-
-        StyleManager.getInstance().addUserAgentStylesheet("../resources/css/application.css");
-
-        this.root = new StackPane();
-
-        this.root.setMinSize(width, height);
-        this.root.setPrefSize(width, height);
-        this.root.setMaxSize(width, height);
-
-        this.charPane = new GridPane();
-
-        this.charPane.setMinWidth(width);
-        this.charPane.setMaxWidth(width);
 
         for (int i = 0; i < alphabetLength; i++) {
             RowConstraints rowConst = new RowConstraints();

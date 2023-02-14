@@ -59,9 +59,9 @@ public class VirtualWiredReflector extends VirtualWiredComponent {
         for (int i = 0; i < wiring.length; i++) {
             final int k = i;
             int startX = 0 + k * 2;
-            int startY = rowWidth / 2 + k * rowWidth;
+            int startY = rowHeight / 2 + k * rowHeight;
             int width = where - startX;
-            int height = (wiring[k] - k) * rowWidth;
+            int height = (wiring[k] - k) * rowHeight;
 
             if (height > 0) {
                 Rectangle rect = new Rectangle(startX, startY, width, height);

@@ -52,9 +52,9 @@ public abstract class VirtualWiredRotorLikeCompoment extends VirtualWiredCompone
         for (int i = 0; i < wiring.length; i++) {
             final int k = i;
             int startX = charColumnWidth + blankColumnWidth;
-            int startY = rowWidth / 2 + rowWidth * k;
+            int startY = rowHeight / 2 + rowHeight * k;
             int endX = charColumnWidth;
-            int endY = rowWidth / 2 + rowWidth * wiring[k];
+            int endY = rowHeight / 2 + rowHeight * wiring[k];
             
             Line line = new Line(startX, startY, endX, endY);
             if (highlight.length > 1 && IntStream.of(highlight).anyMatch(j -> j == k)) {

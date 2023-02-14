@@ -29,10 +29,10 @@ public abstract class GeneralController {
 
     // FXML actions
 
-    @FXML
-    public void back(ActionEvent event) {
-        switchScene("../resources/view/MainScreen2.fxml", new MainScreenController(), event);
-    }
+    // @FXML
+    // public void back(ActionEvent event) {
+    //     switchScene("../resources/view/MainScreen2.fxml", new MainScreenController(), event);
+    // }
 
     @FXML
     public void quit(ActionEvent event) {

@@ -4,7 +4,6 @@ import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableStringValue;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.layout.HBox;
@@ -37,8 +36,7 @@ public class VirtualKeyboard {
 
         StyleManager.getInstance().addUserAgentStylesheet("../resources/css/application.css");
 
-        this.root = new VBox(10);
-        root.setPadding(new Insets(10));
+        this.root = new VBox(2);
 
         final String[][] shifted = new String[][] {
                 { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P" },
@@ -55,7 +53,7 @@ public class VirtualKeyboard {
 
         // build layout
         for (int row = 0; row < shifted.length; row++) {
-            HBox hbox = new HBox(10);
+            HBox hbox = new HBox(2);
             hbox.setAlignment(Pos.CENTER);
             root.getChildren().add(hbox);
 
@@ -93,8 +91,7 @@ public class VirtualKeyboard {
 
         // Add a style class for css:
         button.getStyleClass().add("keyboard");
-        button.setPrefHeight(60);
-        button.setPrefWidth(60);
+        button.setPrefSize(28, 36);
 
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override

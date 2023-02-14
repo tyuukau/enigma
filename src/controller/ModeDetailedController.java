@@ -4,16 +4,32 @@ import controller.components.interior.VirtualInOutIndicator;
 import controller.components.interior.VirtualWiredPlugboard;
 import controller.components.interior.VirtualWiredReflector;
 import controller.components.interior.VirtualWiredRotor;
+import controller.components.outerior.VirtualKeyboard;
+import controller.components.outerior.VirtualLampboard;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import model.Plugboard;
 import model.Reflector;
 import model.Rotor;
 
-public class ModeWiresScreenController extends ModeDemonstrationController {
+public class ModeDetailedController extends ModeDemonstrationController {
 
     // Internal members
+
+    @FXML
+    protected TextArea plugboard;
+
+    @FXML
+    private Pane keyboardPane;
+    
+    @FXML
+    private Pane lampboardPane;
+
+    private VirtualKeyboard vk = new VirtualKeyboard();
+    private VirtualLampboard vl = new VirtualLampboard();
 
     @FXML
     private VBox outputPane;
@@ -25,22 +41,31 @@ public class ModeWiresScreenController extends ModeDemonstrationController {
     private VirtualWiredRotor vwrt0 = new VirtualWiredRotor(160);
     private VirtualWiredRotor vwrt1 = new VirtualWiredRotor(160);
     private VirtualWiredRotor vwrt2 = new VirtualWiredRotor(160);
-    private VirtualWiredPlugboard vwpb = new VirtualWiredPlugboard(100);
-    private VirtualInOutIndicator vwio = new VirtualInOutIndicator(28);
+    private VirtualWiredPlugboard vwpb = new VirtualWiredPlugboard(110);
+    private VirtualInOutIndicator vwio = new VirtualInOutIndicator(18);
 
     // Mandatory methods
 
     protected void initializeOther() {
+        keyboardPane.getChildren().addAll(vk.view());  
+        lampboardPane.getChildren().addAll(vl.view());
+
         resetIndicator();
         resetHighlight();
         drawAll();
     }
 
     protected void resetOther() {
-        initializeOther();
+        vl.unsetButton();   
+
+        resetIndicator();
+        resetHighlight();
+        drawAll();
     }
 
     protected void updateOther(String input) {
+        vl.setButton(outputChar);
+
         setIndicator(input, outputChar);
         setHighlight();
         drawAll();

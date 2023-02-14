@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -51,7 +50,7 @@ public abstract class ModeDemonstrationController extends GeneralController {
     protected ComboBox<String> right_rotor_ring;
 
     @FXML
-    protected TextField plugboard;
+    protected TextArea plugboard;
 
     @FXML
     protected TextArea inputField;

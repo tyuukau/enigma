@@ -1,5 +1,4 @@
-import controller.MainScreenController;
-
+import controller.ModeDetailedController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -15,9 +14,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         System.setProperty("prism.lcdtext", "false");
-        final String STORE_FXML_FILE_PATH = "resources/view/MainScreen2.fxml";
+        final String STORE_FXML_FILE_PATH = "resources/view/WiresScreen3.fxml";
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(STORE_FXML_FILE_PATH));
-        MainScreenController homeController = new MainScreenController();
+        ModeDetailedController homeController = new ModeDetailedController();
         fxmlLoader.setController(homeController);
         Parent root = fxmlLoader.load();
 
