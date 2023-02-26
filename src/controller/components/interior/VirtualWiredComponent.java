@@ -15,8 +15,6 @@ public abstract class VirtualWiredComponent extends VirtualInternalComponent {
 
     protected final List<Character> alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".chars().mapToObj(e -> (char)e).collect(Collectors.toList());
 
-    protected int width;
-
     protected final int charColumnWidth = 20;
     protected int blankColumnWidth;
     protected final int rowHeight = height / 26;

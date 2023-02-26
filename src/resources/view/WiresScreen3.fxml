@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="1100.0" minHeight="-Infinity" minWidth="1100.0" prefHeight="710.0" prefWidth="1100.0" style="-fx-background-color: F4F4F5;" styleClass="root" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1085.0" style="-fx-background-color: F4F4F5;" styleClass="root" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane prefWidth="200.0">
          <left>
@@ -54,12 +54,12 @@
                   <VBox fx:id="keyboardPane" alignment="CENTER" prefHeight="145.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;" />
                </children>
                <BorderPane.margin>
-                  <Insets right="20.0" />
+                  <Insets right="15.0" />
                </BorderPane.margin>
             </VBox>
          </left>
          <right>
-            <VBox maxHeight="625.0" minHeight="-Infinity" prefHeight="610.0" prefWidth="720.0" BorderPane.alignment="CENTER">
+            <VBox maxHeight="610.0" minHeight="-Infinity" prefHeight="610.0" prefWidth="720.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0">
                      <children>
@@ -92,7 +92,7 @@
                         <Insets />
                      </VBox.margin>
                   </HBox>
-                  <VBox fx:id="outputPane1" alignment="CENTER" maxHeight="100.0" minHeight="100.0" prefHeight="100.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;">
+                  <VBox fx:id="outputPane1" alignment="CENTER" maxHeight="680.0" minHeight="100.0" prefHeight="680.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;">
                      <children>
                         <HBox fx:id="grid1" maxHeight="80.0" minHeight="80.0" prefHeight="80.0">
                            <children>
@@ -145,7 +145,7 @@
                                                 </HBox>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -153,12 +153,12 @@
                                                             <Insets />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="left_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="left_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </ComboBox>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -166,7 +166,7 @@
                                                             <Insets left="10.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="left_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="left_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -212,7 +212,7 @@
                                                 </HBox>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -220,12 +220,12 @@
                                                             <Insets />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="middle_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="middle_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </ComboBox>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -233,7 +233,7 @@
                                                             <Insets left="10.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="middle_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="middle_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -279,7 +279,7 @@
                                                 </HBox>
                                                 <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                                    <children>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -287,12 +287,12 @@
                                                             <Insets />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="right_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="right_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
                                                       </ComboBox>
-                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Ring">
+                                                      <Label maxHeight="20.0" minHeight="20.0" prefHeight="20.0" prefWidth="35.0" text="Start">
                                                          <font>
                                                             <Font name="SF Pro Text Regular" size="13.0" />
                                                          </font>
@@ -300,7 +300,7 @@
                                                             <Insets left="10.0" />
                                                          </HBox.margin>
                                                       </Label>
-                                                      <ComboBox fx:id="right_rotor_ring" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
+                                                      <ComboBox fx:id="right_rotor_start" maxHeight="26.0" maxWidth="35.0" minHeight="26.0" minWidth="35.0" prefHeight="26.0" prefWidth="35.0" styleClass="lion">
                                                          <HBox.margin>
                                                             <Insets />
                                                          </HBox.margin>
@@ -339,26 +339,24 @@
                                  </children>
                               </VBox>
                            </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
                         </HBox>
+                        <VBox fx:id="outputPane" alignment="CENTER" prefHeight="480.0" prefWidth="720.0">
+                           <children>
+                              <HBox fx:id="grid" maxHeight="-Infinity" prefHeight="460.0" />
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
                      </children>
                      <padding>
-                        <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </VBox>
-                  <Label maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="100.0" text="Interior View">
-                     <font>
-                        <Font name="SF Pro Text Bold" size="13.0" />
-                     </font>
-                  </Label>
-                  <VBox fx:id="outputPane" alignment="CENTER" prefHeight="450.0" prefWidth="720.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;">
-                     <children>
-                        <HBox fx:id="grid" maxHeight="416.0" prefHeight="416.0" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="5.0" top="5.0" />
                      </padding>
                      <VBox.margin>
                         <Insets />
@@ -371,15 +369,8 @@
             </VBox>
          </right>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="15.0" left="15.0" right="15.0" />
          </padding>
-         <top>
-            <HBox prefHeight="60.0" prefWidth="200.0" style="-fx-border-color: C6C6C8; -fx-border-radius: 6;" BorderPane.alignment="CENTER">
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </HBox>
-         </top>
       </BorderPane>
    </children>
 </AnchorPane>

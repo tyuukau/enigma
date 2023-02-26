@@ -14,7 +14,7 @@ public abstract class VirtualInternalComponent {
 
     // Common members
 
-    protected final int height = 416;
+    protected final int height = 468;
     protected int width;
 
     protected StackPane root;
@@ -41,6 +41,8 @@ public abstract class VirtualInternalComponent {
 
         this.charPane.setMinWidth(width);
         this.charPane.setMaxWidth(width);
+
+        this.width = width;
 
     }
 

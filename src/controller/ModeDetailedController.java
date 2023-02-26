@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.Set;
+
 import controller.components.interior.VirtualInOutIndicator;
 import controller.components.interior.VirtualWiredPlugboard;
 import controller.components.interior.VirtualWiredReflector;
@@ -124,19 +126,22 @@ public class ModeDetailedController extends ModeDemonstrationController {
         for (int i = 0; i < vwrt0.displayWiring.length; i++) {
             vwrt0.displayWiring[i] = leftRotor.forward(i);
         }
-        vwrt0.draw(startPositions[0], ringOffsets[0]);
+        Set<Integer> leftNotch = leftRotor.getNotch();
+        vwrt0.draw(startPositions[0], ringOffsets[0], leftNotch);
 
         Rotor middleRotor = enigma.getMiddleRotor();
         for (int i = 0; i < vwrt1.displayWiring.length; i++) {
             vwrt1.displayWiring[i] = middleRotor.forward(i);
         }
-        vwrt1.draw(startPositions[1], ringOffsets[1]);
+        Set<Integer> middleNotch = middleRotor.getNotch();
+        vwrt1.draw(startPositions[1], ringOffsets[1], middleNotch);
 
         Rotor rightRotor = enigma.getRightRotor();
         for (int i = 0; i < vwrt2.displayWiring.length; i++) {
             vwrt2.displayWiring[i] = rightRotor.forward(i);
         }
-        vwrt2.draw(startPositions[2], ringOffsets[2]);
+        Set<Integer> rightNotch = rightRotor.getNotch();
+        vwrt2.draw(startPositions[2], ringOffsets[2], rightNotch);
 
         Reflector reflector = enigma.getReflector();
         for (int i = 0; i < vwrf.displayWiring.length; i++) {

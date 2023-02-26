@@ -45,6 +45,10 @@ public class Rotor {
         return offset;
     }
 
+    public Set<Integer> getNotch() {
+        return this.notchPosition;
+    }
+
     private static int[] decodeWiring(String encoding) {
         char[] charWiring = encoding.toCharArray();
         int[] wiring = new int[charWiring.length];
